@@ -1,6 +1,4 @@
 ## Instruções
-1. Abra o "Prompt de Comando" (Windows) no modo Administrator ou "Terminal" (Mac), navegue até o diretório onde estão salvos os arquivos e execute:
+1. Abra o diretório onde estão salvos os arquivos entre na pasta `html` execute:
 
-	`node app.js`
-
-	**Confira o resultado no NAVEGADOR:** [http://127.0.0.1:1105/index.html](http://127.0.0.1:1105/index.html)
+	`index.html`
