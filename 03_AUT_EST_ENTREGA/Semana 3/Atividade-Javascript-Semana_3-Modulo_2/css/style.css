@@ -1,0 +1,9 @@
+.result {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.result input {
+    width: 5rem;
+}
