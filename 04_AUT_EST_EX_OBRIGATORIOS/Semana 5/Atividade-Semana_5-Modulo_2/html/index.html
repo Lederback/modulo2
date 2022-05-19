@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Exercício 1:</h1>
+        Insira o primeiro valor:<br>
+        <input type="text" id="value1"><br>
+        Insira o segundo valor:<br>
+        <input type="text" id="value2"><br><br>
+        Escolha o operador:
+        <select id="type">
+            <option value="plus">+</option>
+            <option value="less">-</option>
+            <option value="mult">*</option>
+            <option value="divF">/</option>
+            <option value="divI">//</option>
+            <option value="rest">%</option>
+        </select><br>
+
+        <button onclick="simpleCal()">Calcular</button><br><br>
+
+        <span>Resultado:</span><span id="result"></span>
+
+        <hr>
+        <h1>Exercício 2:</h1>
+        Insira o Preço:<br>
+        <input type="text" id="price"><br><br>
+
+        <button onclick="payNotes()">Calcular</button><br><br>
+
+        <span>Notas:</span>
+        <div id="all-notes">
+
+        </div>
+
+        <hr>
+        <h1>Exercício 3:</h1>
+        Insira uma lista de valores para serem ordenados(Separe os números com uma ","):<br>
+        <input type="text" id="list"><br>
+        Valor foco:<br>
+        <input type="text" id="focus"><br><br>
+
+        <button onclick="bubbleSort()">calcular</button><br><br>
+
+        <span>Lista Inicial:</span><span id="initial-list"></span><br>
+        <span>Lista Ordenada:</span><span id="ordered-list"></span><br>
+        <span>Valor Foco está na posição: </span><span id="focus-output">
+
+        <script src="../js/index.js" type="text/javascript"></script>
+    </body>
+</html>
