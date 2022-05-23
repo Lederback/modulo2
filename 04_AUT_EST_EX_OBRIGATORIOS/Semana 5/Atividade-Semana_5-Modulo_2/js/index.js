@@ -70,6 +70,7 @@ function bubbleSort(){
     const initialListOutput = document.getElementById("initial-list");
     const finalListOutput = document.getElementById("ordered-list");
     const focus = document.getElementById("focus").value;
+    let focusExist = false;
 
     initialListOutput.innerHTML = inputText;
 
@@ -91,13 +92,25 @@ function bubbleSort(){
 
     finalListOutput.innerHTML = list;
     
-    binarySearch(list, parseInt(focus));
+    for (j = 0; j <= list.length; j++){
+        if (list[j] == focus){
+            focusExist = true;
+        }
+    }
+
+    if (focus != "" && focusExist){
+        binarySearch(list, parseInt(focus));
+    }
+    else{
+        const focusOutput = document.getElementById("focus-output");
+        focusOutput.innerHTML = "Valor foco não está na lista, ou o campo está vazio";
+    }
 }
 
 function binarySearch(list, focus){
     let search = "";
     let found = false;
-    let focusOutput = document.getElementById("focus-output");
+    const focusOutput = document.getElementById("focus-output");
 
     let mid = parseInt(list.length/2);
 
