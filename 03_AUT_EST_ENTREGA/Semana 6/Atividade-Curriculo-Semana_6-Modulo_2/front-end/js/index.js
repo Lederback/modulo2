@@ -16,10 +16,12 @@ $(document).ready(function(){
   });
 
 function online(){
-  $.get("http://127.0.0.1:1105/user", function(resultado){
+  $.get("http://127.0.0.1:1105/getUserData", function(resultado){
     $("#json").html(resultado);
     var objeto = JSON.parse(resultado);
-    $("#nome").html(objeto.nome);
-    $("#idade").html(objeto.idade);
+    console.log(objeto);
+    $("#id").html(objeto[0].id);
+    $("#nome").html(objeto[0].Nome);
+    $("#idade").html(objeto[0].Idade);
   });
 }
