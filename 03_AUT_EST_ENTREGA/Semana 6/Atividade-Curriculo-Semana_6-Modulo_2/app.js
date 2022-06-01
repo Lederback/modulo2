@@ -25,16 +25,17 @@ app.get("/user", function(req, res){
   }));
 });
 
-app.get('/getUserData', (req, res) => {
+app.get('/getFormationData', (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
     var sql = `SELECT
-                    Usuario.id,
-                    Usuario.Nome AS Nome,
-                    Usuario.Idade AS Idade 
-                FROM Usuario`;
+                    Formacao.ID,
+                    Formacao.Titulo as Local,
+                    Formacao.Periodo as Duracao,
+                    Formacao.Tipo as Tipo
+                FROM Formacao`;
     
 	db.all(sql, [],  (err, rows ) => {
 		if (err) {

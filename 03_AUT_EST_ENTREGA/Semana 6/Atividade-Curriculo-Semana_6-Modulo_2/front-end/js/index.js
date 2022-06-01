@@ -13,15 +13,19 @@ $(document).ready(function(){
           break;
       }
     });
-  });
+ });
 
-function online(){
-  $.get("http://127.0.0.1:1105/getUserData", function(resultado){
-    $("#json").html(resultado);
-    var objeto = JSON.parse(resultado);
-    console.log(objeto);
-    $("#id").html(objeto[0].id);
-    $("#nome").html(objeto[0].Nome);
-    $("#idade").html(objeto[0].Idade);
+function loadFormation(){
+  $.get("http://127.0.0.1:1105/getFormationData", function(resultado){
+      var objeto = JSON.parse(resultado);
+
+      for(i = 0; i < Object.keys(objeto).length; i++){
+          $("#formation").append(`<b>`+ objeto[i].Local +`</b><br>
+                                  ` + objeto[i].Duracao + `<br>
+                                  ` + objeto[i].Tipo + `
+                                  <br><br>`
+          );
+      }
   });
 }
+
