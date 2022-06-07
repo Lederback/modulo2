@@ -32,9 +32,36 @@
         </select><br><br>
         <button onclick="travel()">Calcular</button><br><br>
         Valor total: <span id="total-travel"></span>
+
         <hr>
         <h1>Exercício 5:</h1>
-        
+        Número de alunos:<br>
+        <input type="text" id="number-students"><br>
+        <button id="button-students" onclick="showInputs()">Exibir</button>
+        <button id="button-media" onclick="calcMedia()" style="display: none;">Calcular</button>
+        <button id="button-reset" onclick="reset()">Resetar</button>
+        <div style="display: flex; flex-direction:row; gap: 10px">
+            <table id="students" style="border-width: 1px; border-style: solid; width: 75%; text-align: center;">
+                <tr>
+                    <th>Aluno</th>
+                    <th>Nota da prova</th>
+                    <th>Nota do trabalho</th>
+                    <th>Média calculada</th>
+                </tr>
+            </table>
+
+            <table id="final-result" style="border-width: 1px; border-style: solid; width: 100%; max-height: 5rem; text-align: center;">
+                <tr>
+                    <th>Média Geral</th>
+                    <th>Média Aritiméticas Notas Prova</th>
+                    <th>Média Aritiméticas Notas Trabalho</th>
+                    <th>Maior Nota Prova</th>
+                    <th>Menor Nota Prova</th>
+                    <th>Maior Nota Trabalho</th>
+                    <th>Menor Nota Trabalho</th>
+                </tr>
+            </table>
+        </div>
 
         <script src="../js/index.js" type="text/javascript"></script>
     </body>
