@@ -1,17 +1,17 @@
 var formationId = 1;
-var formationDatas = {}
+let info;
 
 function changeFormationId(){
-    formationId = document.querySelector(".id").value;
+    formationId = parseInt($('.id :selected').text());
 
-    document.querySelector(".place").value = formationDatas[parseInt(formationId-1)].Local;
-    document.querySelector(".period").value = formationDatas[parseInt(formationId-1)].Duracao;
-    document.querySelector(".type").value = formationDatas[parseInt(formationId-1)].Tipo;
+    document.querySelector(".place").value = info[parseInt(document.querySelector(".id").value)].Local;
+    document.querySelector(".period").value = info[parseInt(document.querySelector(".id").value)].Duracao;
+    document.querySelector(".type").value = info[parseInt(document.querySelector(".id").value)].Tipo;
 
     console.log(formationId);
 }
 
-function changeConfigType(index){
+const changeConfigType = async (index) => {
     switch (index){
         case 1:
             $(".main-box").html(`<input type="text" class="place" placeholder="Informe o local">
@@ -25,7 +25,7 @@ function changeConfigType(index){
             $(".right").css("background-color", "#003049");
             break;
         case 2:
-            getFormation();
+            info = await getFormation();
 
             $(".main-box").html(`<select class="id" onchange="changeFormationId()">
                                 </select>
@@ -35,20 +35,20 @@ function changeConfigType(index){
                                 <button onclick="updateFormation()">Atualizar</button>
             `);
 
-            for(i = 0; i <  Object.keys(formationDatas).length; i ++){
-                $(".id").append(`<option value="` + formationDatas[i].ID + `">` + formationDatas[i].ID + `</option>`);
+            for(i = 0; i <  Object.keys(info).length; i ++){
+                $(".id").append(`<option value="` + i + `">` + info[i].ID + `</option>`);
             }
 
-            document.querySelector(".place").value = formationDatas[0].Local;
-            document.querySelector(".period").value = formationDatas[0].Duracao;
-            document.querySelector(".type").value = formationDatas[0].Tipo;
+            document.querySelector(".place").value = info[0].Local;
+            document.querySelector(".period").value = info[0].Duracao;
+            document.querySelector(".type").value = info[0].Tipo;
 
             $(".left").css("background-color", "#003049");
             $(".mid").css("background-color", "#0030F9");
             $(".right").css("background-color", "#003049");
             break;
         case 3:
-            getFormation();
+            info = await getFormation();
 
             $(".main-box").html(`<select class="id" onchange="changeFormationId()">
                                 </select>
@@ -58,13 +58,13 @@ function changeConfigType(index){
                                 <button onclick="deleteFormation()">Deletar</button>
             `);
 
-            for(i = 0; i <  Object.keys(formationDatas).length; i ++){
-                $(".id").append(`<option value="` + formationDatas[i].ID + `">` + formationDatas[i].ID + `</option>`);
+            for(i = 0; i <  Object.keys(info).length; i ++){
+                $(".id").append(`<option value="` + i + `">` + info[i].ID + `</option>`);
             }
             
-            document.querySelector(".place").value = formationDatas[0].Local;
-            document.querySelector(".period").value = formationDatas[0].Duracao;
-            document.querySelector(".type").value = formationDatas[0].Tipo;
+            document.querySelector(".place").value = info[0].Local;
+            document.querySelector(".period").value = info[0].Duracao;
+            document.querySelector(".type").value = info[0].Tipo;
 
             $(".left").css("background-color", "#003049");
             $(".mid").css("background-color", "#003049");
@@ -117,10 +117,14 @@ function deleteFormation(){
     })
 }
 
-function getFormation(){
-    $.get("http://127.0.0.1:1105/getFormationData", function(resultado){
+const getFormation = async () => {
+
+    let obj;
+
+    await $.get("http://127.0.0.1:1105/getFormationData", function(resultado){
         var objeto = JSON.parse(resultado);
-        formationDatas = objeto;
-        console.log(formationDatas);
+        obj = objeto;
     });
+
+    return obj;
 }
