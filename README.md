@@ -7,7 +7,7 @@ Minhas entregas estão definidas aqui:
 <a href="https://github.com/Lederback/modulo2/tree/main/03_AUT_EST_ENTREGA/Semana%205/Atividade-Curriculo-Semana_5-Modulo_2"> 20/05/2022 - Entrega 4 - Curriculo(Adição de JQuery)</a><br>
 <a href="https://github.com/Lederback/modulo2/tree/main/03_AUT_EST_ENTREGA/Semana%206/Atividade-Curriculo-Semana_6-Modulo_2"> 27/05/2022 - Entrega 5 - Curriculo(Adição de banco de dados e conexão do front com o back)</a><br>
 <a href="https://github.com/Lederback/modulo2/tree/main/03_AUT_EST_ENTREGA/Semana%207/Atividade-Curriculo-Semana_7-Modulo_2"> 02/06/2022 - Entrega 6 - Curriculo(Adição Endpoints CRUD)</a><br>
-<a href="https://github.com/Lederback/modulo2/tree/main/03_AUT_EST_ENTREGA/Semana%208/Atividade-Curriculo-Semana_8-Modulo_2"> 02/06/2022 - Entrega 7 - Curriculo(Integração CRUD)</a>
+<a href="https://github.com/Lederback/modulo2/tree/main/03_AUT_EST_ENTREGA/Semana%208/Atividade-Curriculo-Semana_8-Modulo_2"> 10/06/2022 - Entrega 7 - Curriculo(Integração CRUD)</a>
 
 ## Obrigatórios
 <a href="https://github.com/Lederback/modulo2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%203/Atividade-Javascript-Semana_3-Modulo_2"> 06/05/2022 - Entrega 1 - Calculo Altura Máxima e Velocidade Total</a><br>
