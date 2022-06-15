@@ -4,3 +4,4 @@
 	`node app.js`
 
 	**Confira o resultado no NAVEGADOR:** [http://127.0.0.1:1105/index.html](http://127.0.0.1:1105/index.html)
+	**Para realizar alterações entre em:** [http://127.0.0.1:1105/admin.html](http://127.0.0.1:1105/index.html)
