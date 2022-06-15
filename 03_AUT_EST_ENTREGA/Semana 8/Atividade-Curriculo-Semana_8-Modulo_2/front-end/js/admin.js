@@ -1,5 +1,10 @@
 var formationId = 1;
-var formation = [];
+var formationDatas = {}
+
+function changeFormationId(){
+    formationId = document.querySelector(".id").value;
+    console.log(formationId);
+}
 
 function changeConfigType(index){
     switch (index){
@@ -11,16 +16,34 @@ function changeConfigType(index){
             `);
             break;
         case 2:
-            $(".main-box").html(`<input type="text" class="place" placeholder="Informe o local">
+            getFormation();
+
+            $(".main-box").html(`<select class="id" onchange="changeFormationId()">
+                                </select>
+                                <input type="text" class="place" placeholder="Informe o local">
                                 <input type="text" class="period" placeholder="Informe o período">
                                 <input type="text" class="type" placeholder="Informe o tipo de formação">
                                 <button onclick="updateFormation()">Atualizar</button>
             `);
+
+            for(i = 0; i <  Object.keys(formationDatas).length; i ++){
+                $(".id").append(`<option value="` + formationDatas[i].ID + `">` + formationDatas[i].ID + `</option>`);
+            }
             break;
         case 3:
-            $(".main-box").html(`
-            <button onclick="deleteFormation()">Deletar</button>
+            $(".main-box").html(`<select class="id" onchange="changeFormationId()">
+                                </select>
+                                <input type="text" class="place" placeholder="Informe o local">
+                                <input type="text" class="period" placeholder="Informe o período">
+                                <input type="text" class="type" placeholder="Informe o tipo de formação">
+                                <button onclick="deleteFormation()">Deletar</button>
             `);
+
+            getFormation();
+
+            for(i = 0; i <  Object.keys(formationDatas).length; i ++){
+                $(".id").append(`<option value="` + formationDatas[i].ID + `">` + formationDatas[i].ID + `</option>`);
+            }
             break;
     }
 }
@@ -71,6 +94,8 @@ function deleteFormation(){
 
 function getFormation(){
     $.get("http://127.0.0.1:1105/getFormationData", function(resultado){
-        formation = JSON.parse(resultado);
+        var objeto = JSON.parse(resultado);
+        formationDatas = objeto;
+        console.log(formationDatas);
     });
 }

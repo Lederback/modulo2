@@ -34,6 +34,16 @@ button {
     font-size: 1.25rem;
 }
 
+select {
+    height: 3rem;
+    width: 10rem;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    border-style: none;
+    border-radius: 10px;
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -68,7 +78,7 @@ button {
     justify-content: center;
     width: 33.3%;
     height: 100%;
-    background-color: #0090F9;
+    background-color: #003049;
     cursor: pointer;
 }
 
@@ -79,7 +89,7 @@ button {
     justify-content: center;
     padding: 2rem;
     gap: 2rem;
-    width: 50%;
+    width: 30%;
     height: 55%;
     background: rgba(255, 255, 255, 0.12);
     border-radius: 30px;
