@@ -65,11 +65,17 @@ select {
 .left {
     border-top-left-radius: 32px;
     border-bottom-left-radius: 32px;
+    background-color: #0030F9;
 }
 
 .right {
     border-top-right-radius: 32px;
     border-bottom-right-radius: 32px;
+    background-color: #003049;
+}
+
+.mid {
+    background-color: #003049;
 }
 
 .select-change-type {
@@ -78,7 +84,6 @@ select {
     justify-content: center;
     width: 33.3%;
     height: 100%;
-    background-color: #003049;
     cursor: pointer;
 }
 
