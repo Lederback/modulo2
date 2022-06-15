@@ -1,5 +1,7 @@
 * {
     font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -27,6 +29,9 @@ button {
     background: linear-gradient(150deg, #0094FF 15.29%, #0047FF 82.24%);
     border-radius: 12px;
     cursor: pointer;
+    color: #FFFFFF;
+    font-weight: 200;
+    font-size: 1.25rem;
 }
 
 .main {
@@ -58,9 +63,13 @@ button {
 }
 
 .select-change-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 33.3%;
     height: 100%;
-    background-color: #0047FF;
+    background-color: #0090F9;
+    cursor: pointer;
 }
 
 .main-box {
@@ -70,7 +79,7 @@ button {
     justify-content: center;
     padding: 2rem;
     gap: 2rem;
-    width: 25%;
+    width: 50%;
     height: 55%;
     background: rgba(255, 255, 255, 0.12);
     border-radius: 30px;

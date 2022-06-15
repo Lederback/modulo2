@@ -46,7 +46,7 @@ app.get('/getFormationData', (req, res) => {
 	db.close(); // Fecha o banco
 });
 
-app.post('/updateFormacaoData', (req, res) => {
+app.put('/updateFormacaoData/:id', (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
@@ -55,10 +55,13 @@ app.post('/updateFormacaoData', (req, res) => {
                   Periodo = ?,
                   Tipo = ?
               WHERE
-                  id = ?;`
-    
+                  ID = ?;`
+
     let param = [];
-    param.push(req.body.titulo, req.body.periodo, req.body.tipo, req.body.id);
+    param.push(req.body.titulo, req.body.periodo, req.body.tipo, req.params.id);
+
+	console.log(req.body);
+	console.log(param);
 	
 	db.all(sql, param,  (err, rows ) => {
 		if (err) {
@@ -89,7 +92,7 @@ app.post('/insertFormacaoData', (req, res) => {
 	db.close(); // Fecha o banco
 });
 
-app.post('/deleteFormacaoData', (req, res) => {
+app.delete('/deleteFormacaoData', (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
