@@ -12,4 +12,5 @@ Minhas entregas estão definidas aqui:
 ## Obrigatórios
 <a href="https://github.com/Lederback/modulo2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%203/Atividade-Javascript-Semana_3-Modulo_2"> 06/05/2022 - Entrega 1 - Calculo Altura Máxima e Velocidade Total</a><br>
 <a href="https://github.com/Lederback/modulo2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%205/Atividade-Semana_5-Modulo_2"> 19/05/2022 - Entrega 2 - Resolução de Problemas com Algoritmos</a><br>
-<a href="https://github.com/Lederback/modulo2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%207/Atividade-Semana_7-Modulo_2"> 02/06/2022 - Entrega 3 - Resolução de Problemas com Algoritmos</a>
+<a href="https://github.com/Lederback/modulo2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%207/Atividade-Semana_7-Modulo_2"> 02/06/2022 - Entrega 3 - Resolução de Problemas com Algoritmos</a><br>
+<a href="https://github.com/Lederback/modulo2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%209/Atividade-Semana_9-Modulo_2"> 17/06/2022 - Entrega 4 - Resolução de Problemas com Algoritmos</a>
