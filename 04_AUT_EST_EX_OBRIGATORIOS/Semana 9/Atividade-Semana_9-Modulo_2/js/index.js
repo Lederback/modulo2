@@ -1,4 +1,15 @@
 //Exercício 1
+function calc1(){
+    var number = document.getElementById("ex1-input").value;
+    var list = number.split('');
+
+    if (list[0] % 2 === 0){
+        document.getElementById("ex1-result").innerHTML = "par";
+    }
+    else{
+        document.getElementById("ex1-result").innerHTML = "impar";
+    }
+}
 
 //Exercício 2
 function calc2(){
