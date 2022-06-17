@@ -32,10 +32,49 @@ function calc3(){
         }
     }
 
-    console.log(list);
+    document.getElementById("ex3-result").innerHTML = list;
 }
 
 //Exercício 4
+function calc4(){
+    var n1 = 1;
+    var n2 = 1;
+    var termo = parseInt(document.getElementById("ex4-input").value);
+    var result = [];
+    result.push(n1, n2);
 
+    for(i = 2; i < termo; i ++){
+        var aux = n1 + n2;
+        result.push(aux);
+        n1 = n2;
+        n2 = aux;
+    }
+
+    document.getElementById("ex4-result").innerHTML = result;
+}
 
 //Exercício 5
+function calc5(){
+    var n1 = parseInt(document.getElementById("ex5-input1").value);
+    var n2 = parseInt(document.getElementById("ex5-input2").value);
+    var numerosPrimos = [];
+
+    for(i = n1; i <= n2; i++){
+        var bool = false;
+        for(j = 2; j < i; j++){
+            if(i % j === 0){
+                bool = true; 
+            }
+        }
+        
+        if (i === 1){
+            bool = true;
+        }
+
+        if (!bool){
+            numerosPrimos.push(i);
+        }
+    }
+
+    document.getElementById("ex5-result").innerHTML = numerosPrimos;
+}
